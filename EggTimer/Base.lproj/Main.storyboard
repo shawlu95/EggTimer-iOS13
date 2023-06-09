@@ -131,19 +131,8 @@
                                                 <color key="progressTintColor" systemColor="systemYellowColor"/>
                                                 <color key="trackTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </progressView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Egg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAf-wy-kf2">
-                                                <rect key="frame" x="137" y="80" width="100" height="20.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="r6a-4n-gyt"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" systemColor="systemGreenColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="tMI-AO-M2c" firstAttribute="top" secondItem="pAf-wy-kf2" secondAttribute="bottom" constant="20" id="4OG-Se-TOj"/>
-                                            <constraint firstItem="pAf-wy-kf2" firstAttribute="centerX" secondItem="nJN-th-c5K" secondAttribute="centerX" id="SKa-w6-EkF"/>
                                             <constraint firstAttribute="trailing" secondItem="tMI-AO-M2c" secondAttribute="trailing" id="bMp-aI-Kf1"/>
                                             <constraint firstItem="tMI-AO-M2c" firstAttribute="centerY" secondItem="nJN-th-c5K" secondAttribute="centerY" id="bir-JW-DDC"/>
                                             <constraint firstItem="tMI-AO-M2c" firstAttribute="leading" secondItem="nJN-th-c5K" secondAttribute="leading" id="eRS-vn-QrF"/>
@@ -163,7 +152,7 @@
                     </view>
                     <connections>
                         <outlet property="progressBar" destination="tMI-AO-M2c" id="ivm-pn-Amr"/>
-                        <outlet property="titleLabel" destination="pAf-wy-kf2" id="kqK-jt-2yv"/>
+                        <outlet property="titleLabel" destination="XLm-5r-pSP" id="qRX-Tr-mRE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -175,9 +164,6 @@
         <image name="hard_egg" width="287.5" height="366"/>
         <image name="medium_egg" width="288" height="363"/>
         <image name="soft_egg" width="287" height="365"/>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
