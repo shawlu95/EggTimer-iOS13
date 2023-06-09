@@ -10,21 +10,33 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let softTime = 5
-    let mediumTime = 7
-    let hardTime = 10
+    var elapsed = 0
+    var totalTime = 0
+    var timer = Timer()
+    
+    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var titleLabel: UILabel!
     let eggTimes : [String : Int] = ["Soft": 5, "Medium": 7, "Hard": 10]
+    
     @IBAction func hardnessSelected(_ sender: UIButton) {
-        switch sender.currentTitle {
-            case "Soft":
-                print(softTime)
-            case "Medium":
-                print(mediumTime)
-            case "Hard":
-                print(hardTime)
-            default:
-                print("unknown")
+        totalTime = eggTimes[sender.currentTitle!]!
+        elapsed = 0
+        progressBar.progress = 0.0
+        
+        timer.invalidate()
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTimer() {
+        if elapsed < totalTime {
+            let progress = Float(elapsed) / Float(totalTime)
+            titleLabel.text = "Progress \(100 * progress)%"
+            progressBar.progress = progress
+            elapsed += 1
+        } else {
+            timer.invalidate()
+            titleLabel.text = "Done!"
+            progressBar.progress = 1.0
         }
-        print("using dictionary", eggTimes[sender.currentTitle!]!)
     }
 }
